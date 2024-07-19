@@ -1,0 +1,228 @@
+/* src/index.css */
+
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  box-sizing: border-box;
+  background-image: url('./assets/back.png');
+  background-size: cover;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+/* Header Styles */
+.header {
+  width: 100%;
+  min-width: 600px;
+  background: #01070d;
+  color: #fff;  
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 25px;
+  border: 2px solid black;
+  padding-top: 5px;
+  border: 1px solid rgb(227, 209, 176);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cont {
+  display: flex;
+  margin-left:20px ;
+}
+
+.header-buttons button {
+  background: #fff;
+  color: #007bff;
+  border: none;
+  padding: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100px;
+  margin: 5px;
+}
+
+
+
+.header-buttons button:hover {
+  background: #000000;
+  color: #fff;
+  border: 2px solid white;
+}
+
+/* Leaderboard Styles */
+.leaderboard {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blurred background for a frosted glass effect */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow-y:visible; /* Activate vertical scrolling */
+  max-height: 540px; /* Example max-height; adjust as needed */
+  border: 1px solid wheat;
+
+}
+
+.leaderboard h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #007bff;
+}
+
+.leaderboard-header, .leaderboard li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.leaderboard-header {
+  border-bottom: 2px solid #007bff;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leaderboard li {
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.leaderboard li:last-child {
+  border-bottom: none;
+}
+
+.rank, .username, .time {
+  flex: 1;
+  text-align: center;
+}
+
+/* Current Rank Styles */
+.current-rank {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blurred background for a frosted glass effect */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+.current-rank h2 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.current-rank p {
+  margin: 5px 0;
+}
+
+.footer {
+  width: 90%;
+  background: #000103;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1000;
+  margin-left: 5%;
+  margin-bottom: 5px;
+  border-radius:20px ;
+  border: 1px solid wheat;
+}
+
+/* Add Score Popup Styles */
+.add-score-popup {
+  position: fixed;
+  bottom: 530px;
+  right: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.add-score-popup input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.add-score-popup button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-score-popup button:hover {
+  background-color: #0056b3;
+}
+
+/* Remove Auto Scrolling Footer Styles */
+.auto-scrolling-footer {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .leaderboard, .add-score-popup, .header, .header-image, .under-leaderboard-image, .current-rank, .footer {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .add-score-popup input {
+    width: 100%;
+  }
+}
